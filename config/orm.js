@@ -1,8 +1,8 @@
 const connection = require("../config/connection.js");
 
 const orm = {
-    selectAll: function(input, cb) {
-        let queryString = "SELECT * FROM " + input + ";";
+    selectAll: function(table, cb) {
+        let queryString = "SELECT * FROM " + table;
         connection.query(queryString, function(err, result) {
             if (err) {
                 throw err;
@@ -11,16 +11,16 @@ const orm = {
         });
     },
     insertOne: function(table, value, cb) {
-        let queryString = "INSERT INTO " + table + "(burger)" + "VALUES (?)";
-        connection.query(queryString, function(err, result) {
+        let queryString = "INSERT INTO " + table + " (burger_name) " + "VALUES (\"" + value + "\")";
+        connection.query(queryString, value, function(err, result) {
             if (err) {
                 throw err;
             }
             cb(result);
         });
     },
-    updateOne: function(table, objColValues, condition, cb) {
-        let queryString = "UPDATE" + table + "SET" + objColValues + "WHERE" + condition;
+    updateOne: function(table, trueFalse, burgerId, cb) {
+        let queryString = "UPDATE " + table + " SET " + trueFalse + " WHERE id = " + burgerId;
         connection.query(queryString, function(err, result) {
             if (err) {
                 throw err;
