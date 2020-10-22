@@ -18,6 +18,12 @@ const burger = {
             cb(res);
         });
     },
+
+    delete: function(deleteID, cb) {
+        orm.deleteOne("burgers", deleteID, function(res) {
+            cb(res);
+        });
+    },
 };
 
 module.exports = burger;

@@ -38,17 +38,22 @@ router.put("/api/burgers/:id", function(req, res) {
     });
 });
 
-// router.delete("/api/burgers/:id", function(req, res) {
-//     const condition = "id = " + req.params.id;
+router.delete("/api/burgers/:id", function(req, res) {
+    const deleteID = "id = " + req.params.id;
+    console.log("deleteID!!!!!!", deleteID)
+        // console.log("this is the devoured!!!!", req.body.devoured)
 
-//     burger.delete(condition, function(result) {
-//         if (result.affectedRows == 0) {
-//             return res.status(404).end();
-//         } else {
-//             res.status(200).end();
-//         }
-//     });
-// });
+    burger.delete(
+        // {devoured: req.body.devoured}, 
+        deleteID,
+        function(result) {
+            if (result.affectedRows == 0) {
+                return res.status(404).end();
+            } else {
+                res.status(200).end();
+            }
+        });
+});
 
 // Export routes for server.js to use.
 module.exports = router;

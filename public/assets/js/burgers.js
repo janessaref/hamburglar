@@ -51,18 +51,26 @@ $(function() {
         );
     });
 
-    // $(".delete-burger").on("click", function(event) {
-    //     var id = $(this).data("id");
+    $(".delete-burger").on("click", function(event) {
+        // console.log("hello");
+        const id = $(this).data("id");
+        // const devouredBurger = !($(this).data("yumburger"));
+        // console.log("delete id", id);
+        // console.log(devouredBurger)
 
-    //     // Send the DELETE request.
-    //     $.ajax("/api/burgers/" + id, {
-    //         type: "DELETE"
-    //     }).then(
-    //         function() {
-    //             console.log("thrown burger", id);
-    //             // Reload the page to get the updated list
-    //             location.reload();
-    //         }
-    //     );
-    // });
+        // const burgerEaten = {
+        //     devoured: devouredBurger
+        // };
+        // Send the DELETE request.
+        $.ajax("/api/burgers/" + id, {
+            type: "DELETE",
+            // data: burgerEaten
+        }).then(
+            function() {
+                console.log("thrown burger", id);
+                // Reload the page to get the updated list
+                location.reload();
+            }
+        );
+    });
 });

@@ -2,9 +2,10 @@
 	{{burger_name}}
 
 	<button class="btn btn-danger eatBurger" data-id="{{id}}" data-yumburger="{{devoured}}">
-		{{#unless devoured}}EAT ME{{else}}POOP{{/unless}}
+		{{#unless devoured}}EAT ME{{/unless}}
 	</button>
 
-	{{!-- <button class="delete-burger" data-id="{{this.id}}">THROW BURGER AWAY</button> --}}
+	<button class="delete-burger btn btn-danger" data-id="{{this.id}}">
+		{{#if devoured}}THROW BURGER AWAY{{/if}}</button>
 </li>
 
