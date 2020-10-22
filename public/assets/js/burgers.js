@@ -1,9 +1,12 @@
 // Make sure we wait to attach our handlers until the DOM is fully loaded.
 $(function() {
     $(".eatBurger").on("click", function(event) {
+
+        console.log("hello");
+
         event.preventDefault();
         const id = $(this).data("id");
-        const devouredBurger = $(this).data("yumBurger");
+        const devouredBurger = !($(this).data("yumburger"));
         console.log(id);
         console.log(devouredBurger);
 
@@ -25,7 +28,9 @@ $(function() {
     });
 
     $(".create-form").on("submit", function(event) {
-        // Make sure to preventDefault on a submit event.
+
+        console.log("added the burger!!!!")
+            // Make sure to preventDefault on a submit event.
         event.preventDefault();
 
         const addBurger = {

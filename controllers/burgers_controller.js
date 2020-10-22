@@ -26,7 +26,7 @@ router.put("/api/burgers/:id", function(req, res) {
     const burgerDevouredID = "id = " + req.params.id;
 
     console.log("burgerDevouredID", burgerDevouredID);
-
+    console.log("this is the devoured!!!!", req.body.devoured)
     burger.update({
         devoured: req.body.devoured
     }, burgerDevouredID, function(result) {

@@ -12,9 +12,11 @@ function objToSql(ob) {
             if (typeof value === "string" && value.indexOf(" ") >= 0) {
                 value = "'" + value + "'";
             }
-            // e.g. {name: 'Lana Del Grey'} => ["name='Lana Del Grey'"]
-            // e.g. {sleepy: true} => ["sleepy=true"]
+            console.log("this is the VAL!!!", value)
+                // e.g. {name: 'Lana Del Grey'} => ["name='Lana Del Grey'"]
+                // e.g. {sleepy: true} => ["sleepy=true"]
             arr.push(key + "=" + value);
+            console.log("ARR!!!!!", arr)
         }
     }
 
@@ -42,7 +44,7 @@ const orm = {
         });
     },
     updateOne: function(table, trueFalse, burgerDevouredID, cb) {
-        let queryString = "UPDATE " + table + " SET " + objToSql(trueFalse); + " WHERE " + burgerDevouredID;
+        let queryString = "UPDATE " + table + " SET " + objToSql(trueFalse) + " WHERE " + burgerDevouredID;
         connection.query(queryString, function(err, result) {
             if (err) {
                 throw err;
