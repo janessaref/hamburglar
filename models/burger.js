@@ -13,7 +13,7 @@ const burger = {
         });
     },
 
-    update: function(trueFalse, burgerId, cb) {
+    update: function(trueFalse, burgerDevouredID, cb) {
         orm.updateOne("burgers", trueFalse, burgerId, function(res) {
             cb(res);
         });

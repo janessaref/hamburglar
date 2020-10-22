@@ -1,8 +1,11 @@
 // Make sure we wait to attach our handlers until the DOM is fully loaded.
 $(function() {
     $(".eatBurger").on("click", function(event) {
+        event.preventDefault();
         const id = $(this).data("id");
         const devouredBurger = $(this).data("yumBurger");
+        console.log(id);
+        console.log(devouredBurger);
 
         const burgerEaten = {
             devoured: devouredBurger
