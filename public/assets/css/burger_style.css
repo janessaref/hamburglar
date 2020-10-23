@@ -7,6 +7,23 @@ h2,
     /* background-image: url('../public/assets/img/burger.png');
     background-position: center; */
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #fcb118;
+}
+
+body {
+    background-color: rgb(245, 238, 186);
+}
+
+.jumbotron {
+    background-color: rgb(245, 238, 186);
+    border-style: solid;
+    border-color: rgb(204, 198, 152);
+    border-width: 5px;
+    margin-top: 20px;
+}
+
+img {
+    margin-top: 0px;
 }
 
 li {
