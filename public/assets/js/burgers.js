@@ -7,8 +7,6 @@ $(function() {
         event.preventDefault();
         const id = $(this).data("id");
         const devouredBurger = !($(this).data("yumburger"));
-        console.log(id);
-        console.log(devouredBurger);
 
         const burgerEaten = {
             devoured: devouredBurger
@@ -28,14 +26,11 @@ $(function() {
     });
 
     $(".create-form").on("submit", function(event) {
-
-        console.log("added the burger!!!!")
-            // Make sure to preventDefault on a submit event.
+        // Make sure to preventDefault on a submit event.
         event.preventDefault();
 
         const addBurger = {
             burger_name: $("#burg").val().trim(),
-            // devoured: $("[burger_name=]:checked").val().trim()
         };
 
         // Send the POST request.

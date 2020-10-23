@@ -1,40 +1,54 @@
-<div class="row-md-12">
-    <center>
-    <div class="col-md-6 burgerBox card float-left">
-        <div class="card body">
-            <div class="input group">
+<div class="row">
+
+    <div class="col-md burgerBox text-center card p-3 mr-2" style="height: 400px">
+        <h4 class="card header">BURGER ORDER</h4>
+        <div class="card overflow-auto content" style="height: 350px">
+        {{!-- <div class="card body text-center mx-auto"> --}}
+            {{!-- <div class="card"> --}}
                 <ul>
-                    {{#each burgers}}
-                        {{#unless devoured}}
-                            {{> burgers/burger-block devoured=false}}
+                   {{#each burgers}}
+                  
+                    {{#unless devoured}}
+                    <h5>{{> burgers/burger-block devoured=false}}</h5>
+                            
                         {{/unless}}
                     {{/each}}
                 </ul>
-            </div>
-        </div>
+            {{!-- </div> --}}
+        {{!-- </div> --}}
     </div>
-
-    <div class="col-md-6 burgerEatBox card">
-        <div class="card body">
+    </div>
+    {{!-- <div class="col-md-space"></div> --}}
+    <div class="col-md burgerBox text-center card p-3 ml-2" style="height: 400px">
+         <h4 class="card header">EAT THE BURGER</h4>
+         <div class="card overflow-auto content" style="height: 350px">
+             {{!-- <div class="card body" style="height: 350px"> --}}
             <ul>
                 {{#each burgers}}
                     {{#if devoured}}
-                        {{> burgers/burger-block devoured=true}}
+                        <h5>{{> burgers/burger-block devoured=true}}</h5>
                     {{/if}}
                 {{/each}}
             </ul>
-        </div>
+        {{!-- </div> --}}
     </div>
-    </center>
+         </div>
+        
+
 </div>
     <h2>Add a burger to the menu!</h2>
-<div class="row-md-12"> 
-        <form action="/api/burgers" method="POST" class="create-form">
+<div class="row-md-12">
+    <div class="card">
+        <div class="card body">
+              <form action="/api/burgers" method="POST" class="create-form">
             <div class="form-group">
-                <textarea type="text" id="burg" name="burger_name"></textarea>
+                <input type="text" id="burg" name="burger_name">
             </div>
             <button type="submit">Add burger</button>
         </form>
+        </div> 
+    </div>
+       
     </div>
 </div>
 

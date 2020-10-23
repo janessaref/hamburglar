@@ -20,16 +20,29 @@ body {
     border-color: rgb(204, 198, 152);
     border-width: 5px;
     margin-top: 20px;
-    padding-top: 3%;
-    padding-bottom: 3%;
-}
-
-#hamburglar {
-    margin-left: 0px;
+    padding-top: 2%;
+    padding-bottom: 1%;
 }
 
 li {
     list-style-type: none;
+    /* position: relative; */
+    /* display: block; */
+    /* list-style-type: group; */
+    padding: 20px;
+    margin: 0 auto;
+}
+
+.btn {
+    border-radius: 8px;
+    background-color: #ff6666;
+    border-color: #ff8080;
+    color: white;
+    margin: 0 auto;
+}
+
+.content {
+    background-color: #fcb118;
 }
 
 
@@ -46,3 +59,12 @@ li {
     margin-left: 0 auto;
     margin-right: 0 auto;
 } */
+
+.burgerBox {
+    background-color: #fcca0b;
+    /* opacity: .8; */
+}
+
+.header {
+    background-color: #fcb118;
+}
