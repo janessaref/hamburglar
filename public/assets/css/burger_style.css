@@ -20,10 +20,12 @@ body {
     border-color: rgb(204, 198, 152);
     border-width: 5px;
     margin-top: 20px;
+    padding-top: 3%;
+    padding-bottom: 3%;
 }
 
-img {
-    margin-top: 0px;
+#hamburglar {
+    margin-left: 0px;
 }
 
 li {
