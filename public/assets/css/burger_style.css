@@ -23,6 +23,10 @@ h1 {
     color: #fcb118;
 }
 
+.wrapper {
+    width: 103%;
+}
+
 #hamburger {
     margin-bottom: 100%;
 }
