@@ -25,6 +25,7 @@ h1 {
 
 .wrapper {
     width: 103%;
+    height: auto;
 }
 
 #hamburger {
