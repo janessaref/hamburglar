@@ -70,7 +70,7 @@ function objToSql(ob) {
 
 ## Deployed Link
 
-* [See Live Website](#)
+* [See Live Website](https://thegoodburger.herokuapp.com/)
 
 ## Authors
 
