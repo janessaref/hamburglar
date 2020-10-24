@@ -4,7 +4,7 @@ In this project, I created a fun application that logs in burger orders using My
 
 This is a diner application that lets users input the names of burgers they would like to eat and when submitting their order, it will be in the "order is ready" column waiting to be eaten and munched on (ORM-ORM!). And when the user is ready to eat the burger, there could be some leftovers or trash around so it's time to throw it away because CLAY-GO (clean as you go)! Each burger will be stored in the database when the user orders and eats the burger but when the user throws it away, the burger is then removed from the database. 
 
-This was a fun application to build, adding my own styling and flavor to this project. I definitely enjoyed and appreciated handlebars and MVC. At first, it was intimidating to understand but working with this project, I am able to dissect what and how this is working. 
+This was a fun application to build, adding my own styling and flavor to this project. I definitely enjoyed and appreciated handlebars and MVC. At first, it was intimidating to understand but working with this project, I am able to dissect what and how this is working. Check out my portfolio at the authors section for more of the applications I've worked on! As for the live website, the three burgers won't be displayed, because I want you to add your burger cravings!
 
 ## Table of Contents
 
@@ -78,6 +78,7 @@ function objToSql(ob) {
 
 - [Link to Github](https://github.com/janessaref)
 - [Link to LinkedIn](https://www.linkedin.com/in/janessafong)
+- [Link to Portfolio](https://janessaref.github.io/my-portfolio/)
 
 ## License
 
