@@ -15,7 +15,7 @@
     </div>
     {{!-- leftovers box on the right to delete --}}
     <div class="col-md burgerBox text-center card p-3" style="height: 350px">
-         <h4 class="card header">LEFTOVERS?</h4>
+         <h4 class="card header">ORM-ORM-ORM LEFTOVERS?</h4>
          <div class="card overflow-auto content" style="height: 300px">
              {{!-- lists each burger and sets devoured to true --}}
             <ul class="list-group">
@@ -30,7 +30,7 @@
 </div>
 {{!-- user input area --}}
  <h5>CAN I TAKE YOUR ORDER?</h5>
-{{!-- <div class="row-md"> --}}
+<div class="row-md">
     <div class="card addburger">
         <div class="card body burgerinput">
             {{!-- posts the user input into the order ready box on the left --}}
@@ -39,11 +39,11 @@
                     {{!-- textarea for the user's burger input --}}
                     <textarea type="text" id="burg" name="burger_name" style="resize: none"></textarea>
                 </div>
+                 <button type="submit" class="btn btn-outline-danger orderbtn">PLACE ORDER</button>
             </form>
-            <button type="submit" class="btn btn-outline-danger order">PLACE ORDER</button>
         </div> 
     </div>    
-{{!-- </div> --}}
+</div>
 {{!-- link to github repository --}}
 <div class="row text-center repo">
     <a href="https://github.com/janessaref/hamburglar" target="_blank">

@@ -1,32 +1,34 @@
+// requires express and burger from the burger.js
 const express = require("express");
 const burger = require("../models/burger.js");
 
+// express router
 const router = express.Router();
 
+// gets the data in the main page
 router.get("/", function(req, res) {
     burger.all(function(data) {
         const hbsObject = {
             burgers: data
         };
         console.log(hbsObject);
+        // rendered by index.handlebars
         res.render("index", hbsObject);
     });
 });
 
+// posts the user's input into the "order is ready" column
 router.post("/api/burgers", function(req, res) {
     burger.insert([
         req.body.burger_name
     ], function(result) {
         res.json({ id: result.insertId });
-        // res.redirect("/");
     });
 });
 
+// updates the status of "devoured" to true by the id
 router.put("/api/burgers/:id", function(req, res) {
     const burgerDevouredID = "id = " + req.params.id;
-
-    console.log("burgerDevouredID", burgerDevouredID);
-    console.log("this is the devoured!!!!", req.body.devoured)
     burger.update({
         devoured: req.body.devoured
     }, burgerDevouredID, function(result) {
@@ -38,13 +40,10 @@ router.put("/api/burgers/:id", function(req, res) {
     });
 });
 
+// removes the burger when "throw away" button is clicked by the id
 router.delete("/api/burgers/:id", function(req, res) {
     const deleteID = "id = " + req.params.id;
-    console.log("deleteID!!!!!!", deleteID)
-        // console.log("this is the devoured!!!!", req.body.devoured)
-
     burger.delete(
-        // {devoured: req.body.devoured}, 
         deleteID,
         function(result) {
             if (result.affectedRows == 0) {
@@ -55,5 +54,5 @@ router.delete("/api/burgers/:id", function(req, res) {
         });
 });
 
-// Export routes for server.js to use.
+// Export routes for server.js to use
 module.exports = router;

@@ -19,12 +19,33 @@ body {
     padding-bottom: 0%;
 }
 
+h1 {
+    color: #fcb118;
+}
+
+#hamburger {
+    margin-bottom: 100%;
+}
+
 .burgerBox {
     background-color: #fce793;
     border-radius: 10px;
     margin-right: 12px;
     margin-left: 12px;
     margin-bottom: 12px;
+}
+
+.header {
+    background-color: #f7d38c;
+    border-radius: 10px;
+    padding: 2px;
+}
+
+.content {
+    background-color: #f7d38c;
+    border-radius: 10px;
+    padding: 10px;
+    margin-top: 2px;
 }
 
 li {
@@ -44,21 +65,10 @@ li {
     margin-top: 5px;
 }
 
-.content {
-    background-color: #f7d38c;
-    border-radius: 10px;
-    padding: 10px;
-    margin-top: 2px;
-}
-
 h5 {
     text-align: center;
     margin-top: 5px;
     margin-bottom: 10px
-}
-
-#hamburger {
-    margin-bottom: 100%;
 }
 
 .addburger {
@@ -83,13 +93,7 @@ textarea {
     height: 75px;
 }
 
-.header {
-    background-color: #f7d38c;
-    border-radius: 10px;
-    padding: 2px;
-}
-
-.order {
+.orderbtn {
     margin-top: 1px;
 }
 

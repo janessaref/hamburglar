@@ -1,10 +1,8 @@
 <li class="list-group-item" style="background-color: #afdab2; border-radius: 10px">
+	{{!-- name of each burger --}}
 	{{burger_name}}
-
-	
-		{{#unless devoured}}<div class="row"><button class="btn btn-outline-danger eatBurger" data-id="{{id}}" data-yumburger="{{devoured}}">STEAL ME</button></div>{{/unless}}
-	
-
-	{{#if devoured}}<div class="row"><button class="delete-burger btn btn-outline-danger" data-id="{{this.id}}">THROW BURGER AWAY</div></button>{{/if}}
+		{{!-- buttons for updating "eat me" and deleting "throw away"--}}
+		{{#unless devoured}}<div class="row"><button class="btn btn-outline-danger eatBurger" data-id="{{id}}" data-yumburger="{{devoured}}">EAT ME</button></div>{{/unless}}
+		{{#if devoured}}<div class="row"><button class="delete-burger btn btn-outline-danger" data-id="{{this.id}}">THROW AWAY</div></button>{{/if}}
 </li>
 
