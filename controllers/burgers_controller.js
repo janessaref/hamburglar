@@ -19,11 +19,14 @@ router.get("/", function(req, res) {
 
 // posts the user's input into the "order is ready" column
 router.post("/api/burgers", function(req, res) {
-    burger.insert([
-        req.body.burger_name
-    ], function(result) {
-        res.json({ id: result.insertId });
-    });
+    // if statement so that a null value won't be posted
+    if (req.body.burger_name !== "") {
+        burger.insert([
+            req.body.burger_name
+        ], function(result) {
+            res.json({ id: result.insertId });
+        });
+    };
 });
 
 // updates the status of "devoured" to true by the id
