@@ -1,9 +1,7 @@
-h1,
-h2,
-.create-form {
+* {
     text-align: center;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    color: #fcb118;
+    color: black;
 }
 
 body {
@@ -19,6 +17,14 @@ body {
     margin-bottom: 15px;
     padding-top: 1%;
     padding-bottom: 0%;
+}
+
+.burgerBox {
+    background-color: #fce793;
+    border-radius: 10px;
+    margin-right: 12px;
+    margin-left: 12px;
+    margin-bottom: 12px;
 }
 
 li {
@@ -75,14 +81,6 @@ textarea {
     background-color: rgb(245, 238, 186);
     border-color: rgb(204, 198, 152);
     height: 75px;
-}
-
-.burgerBox {
-    background-color: #fce793;
-    border-radius: 10px;
-    margin-right: 12px;
-    margin-left: 12px;
-    margin-bottom: 12px;
 }
 
 .header {
